@@ -6,8 +6,12 @@
 <title>トイプードルの犬種情報｜わんちゃんホンポ</title>
 
 <!-- ==============================
-     既存CSS（そのまま読み込み・変更なし）
+     既存CSS（わんちゃんホンポ実サイトのCDNから直接読み込み）
+     ※ヘッダー・フッターなど全ページ共通の見た目は template.css が担っている想定
      ============================== -->
+<link rel="stylesheet" href="https://images.wanchan.jp/css/reset.css">
+<link rel="stylesheet" href="https://images.wanchan.jp/css/template.css?1774248347">
+<link rel="stylesheet" href="https://images.wanchan.jp/css/sp_menu.css?1770947828" media="screen and (max-width: 1023px)">
 
 <!-- ==============================
      ★今回の追加CSS（差分はこのファイルのみ）
@@ -43,32 +47,87 @@ body {
 }
 
 /* ---------------------------------------------------------------------
-   1. ヘッダー（簡易版）
+   1. ヘッダー・フッター（わんちゃんホンポ実サイトを再現）
+   ※実サイトのHTML/CSSソースそのものは取得できなかったため、
+     実サイトの画像URL・リンク先・掲載内容を使って見た目を再構築したもの。
+     完全に同一のCSSが必要な場合は、実サイトの生ソースを共有してもらえれば
+     それに合わせて調整可能。
    --------------------------------------------------------------------- */
-.site_header {
+.wc_header {
   border-bottom: 1px solid var(--wc-border);
-  padding: 12px 0;
+  padding: 10px 16px 12px;
 }
-.site_header__inner {
+.wc_header__top {
   max-width: var(--wc-content-width);
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 0 16px;
+  gap: 12px;
 }
-.site_header__logo {
+.wc_header__menu_btn {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.wc_header__menu_btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.wc_header__logo {
+  flex: 1;
+  margin: 0;
+}
+.wc_header__logo a {
   color: var(--wc-pink);
   font-size: 22px;
   font-weight: 700;
-  margin: 0;
+  text-decoration: none;
 }
-.site_header__tagline {
+.wc_header__search_btn {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+.wc_header__search_btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.wc_header__tagline {
+  max-width: var(--wc-content-width);
+  margin: 6px auto 0;
   color: var(--wc-text-sub);
   font-size: 11px;
   line-height: 1.5;
-  margin: 0;
 }
+.wc_header__nav {
+  max-width: var(--wc-content-width);
+  margin: 8px auto 0;
+  display: flex;
+  gap: 16px;
+}
+.wc_header__nav a {
+  font-size: 12px;
+  color: var(--wc-text-sub);
+  text-decoration: none;
+}
+.wc_header__nav a:hover {
+  text-decoration: underline;
+}
+
+/* --- フッター ---
+   実サイトのフッターHTML（.footer / .footer_app_dl 等）は
+   実サイト本来のCSS（template.css / style.css）でスタイルされる前提の構造。
+   このファイルにはそのCSSの中身が無いため、現状はスタイル未適用（検証用）。
+------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------
    2. 全体コンテナ（記事ページに合わせて幅を統一）
@@ -669,12 +728,32 @@ body {
 </head>
 <body class="pc">
 
-<!-- ==== ヘッダー（既存踏襲・簡易版） ==== -->
-<header class="site_header">
-  <div class="site_header__inner">
-    <p class="site_header__logo">わんちゃんホンポ</p>
-    <p class="site_header__tagline">わんちゃんとの暮らしをサポートする犬の専門メディア<br>話題の犬ニュースや生活の知恵を毎日配信</p>
-  </div>
+<!-- ==============================
+     ヘッダー（わんちゃんホンポ実サイトのHTMLをそのまま使用・検証用）
+     ============================== -->
+<header id="header" class="sb-slide Fixed">
+
+	<div class="wrap">
+
+	<!--sp_nemu-->
+	<p id="drawer_toggle"><img src="https://images.wanchan.jp/images/header/menu_sp.png" alt="メニュー"></p>
+	<div class="header_inner wanchan_nav ">
+				<div class="logo"><a href="https://wanchan.jp/"><img src="https://images.wanchan.jp/images/header/header_logo.png" alt="わんちゃんホンポ"></a></div>
+				<div class="header_info">わんちゃんとの暮らしをサポートする犬の専門メディア<br>話題の犬ニュースや生活の知恵を毎日配信</div>
+	</div>
+
+	<!--sp_search_category_link-->
+	<div class="pc_header_nav">
+		<div class="header_cate"><a href="https://wanchan.jp/osusume/category_list" class="pc_cate_link">カテゴリ一覧</a></div>
+		<div class="header_search"><a href="https://wanchan.jp/osusume/search_form" class="pc_cate_link">記事を検索</a></div>
+				<div class="header_login"><a href="https://wanchan.jp/general/login" class="pc_cate_link" rel="nofollow">会員登録/ログイン</a></div>
+			</div>
+	<div class="search_category_link">
+		<a href="https://wanchan.jp/osusume/search_form" class="sp_form_link"><img src="https://images.wanchan.jp/images/header/search_sp.png" alt="検索"></a>
+	</div>
+
+	</div>
+
 </header>
 
 <div class="wrap kensyu_detail">
@@ -976,5 +1055,151 @@ body {
   </div>
 
 </div>
+
+<!-- ==============================
+     アプリDL誘導（わんちゃんホンポ実サイトのHTMLをそのまま使用）
+     ============================== -->
+<div class="footer_app_dl">
+	<div class="wrap">
+		<picture>
+			<source media="(max-width: 1023px)" srcset="https://images.wanchan.jp/images/footer/footer_app_dl_sp.png">
+			<img src="https://images.wanchan.jp/images/footer/footer_app_dl_pc.png" loading="lazy" alt="公式アプリ好評配信中！" class="footer_app_dl_pc">
+		</picture>
+		<ul class="app_list">
+			<li>
+				<a href="https://itunes.apple.com/jp/app/wanchanhonpo-quanno-xi-nu/id1024363447?l=ja&amp;ls=1&amp;mt=8" class="itunes" target="_blank" rel="nofollow">
+					<img src="https://images.wanchan.jp/images/footer/app_store_pc.png" loading="lazy" alt="わんちゃんホンポアプリ APP Store">
+				</a>
+			</li>
+			<li>
+				<a href="https://play.google.com/store/apps/details?id=jp.qson.osurepo.wanchan" class="google" target="_blank" rel="nofollow">
+					<img src="https://images.wanchan.jp/images/footer/google.png" loading="lazy" alt="わんちゃんホンポアプリ Google play">
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="footer_app_dl_sp">
+	<a href="https://play.google.com/store/apps/details?id=jp.qson.osurepo.wanchan" class="footer_app_dl_sp_img" rel="nofollow"><img src="https://images.wanchan.jp/images/footer/footer_app_dl_sp.png" loading="lazy" alt="わんちゃんホンポアプリDL"></a>
+	<div class="block">
+		<p class="footer_app_dl_sp_title">アプリで愛犬との生活をより豊かに。</p>
+		<p class="footer_app_dl_sp_dis">快適にわんちゃんホンポの記事が読める！<br>見やすいカテゴリでみたいジャンルがすぐ見つかる。飼い主と愛犬のための犬専用アプリ。</p>
+		<a href="https://play.google.com/store/apps/details?id=jp.qson.osurepo.wanchan" class="footer_app_dl_sp_btn" rel="nofollow">アプリをダウンロード(無料)</a>
+	</div>
+</div>
+
+<!-- ==============================
+     フッター（わんちゃんホンポ実サイトのHTMLをそのまま使用）
+     ============================== -->
+<footer class="footer">
+	<div class="wrap footer_content">
+
+		<div class="footer_nav">
+			<dl class="service">
+				<dt>サービス一覧</dt>
+				<dd>
+					<ul class="list">
+						<li><a href="https://wanchan.jp/photo">今日のわんちゃん</a></li>
+						<li><a href="https://pet-hoken-hikaku.jp/">ペット保険</a></li>
+					</ul>
+				</dd>
+			</dl>
+
+			<div id="pagetop" style="display: block;">
+			<img src="https://images.wanchan.jp/images/footer/pageTop.png" loading="lazy" alt="トップへ戻る"><br>
+			ページの先頭へ
+			</div>
+			<dl class="about">
+				<dt>わんちゃんホンポについて</dt>
+				<dd>
+					<ul class="list">
+						<li><a href="https://wanchan.jp/top/feature">わんちゃんホンポとは</a></li>
+						<li><a href="https://wanchan.jp/top/editpolicy">編集ポリシー</a></li>
+						<li><a href="https://wanchan.jp/top/rule">利用規約</a></li>
+						<li><script type="text/javascript">
+	//<![CDATA[
+	var l=new Array();
+	l[0] = '>';
+	l[1] = 'a';
+	l[2] = '/';
+	l[3] = '<';
+	l[4] = '|12379';
+	l[5] = '|12431';
+	l[6] = '|21512';
+	l[7] = '|12356';
+	l[8] = '|21839';
+	l[9] = '|12362';
+	l[10] = '>';
+	l[11] = '"';
+	l[12] = '|112';
+	l[13] = '|106';
+	l[14] = '|46';
+	l[15] = '|110';
+	l[16] = '|97';
+	l[17] = '|104';
+	l[18] = '|99';
+	l[19] = '|110';
+	l[20] = '|97';
+	l[21] = '|119';
+	l[22] = '|64';
+	l[23] = '|111';
+	l[24] = '|102';
+	l[25] = '|110';
+	l[26] = '|105';
+	l[27] = ':';
+	l[28] = 'o';
+	l[29] = 't';
+	l[30] = 'l';
+	l[31] = 'i';
+	l[32] = 'a';
+	l[33] = 'm';
+	l[34] = '"';
+	l[35] = '=';
+	l[36] = 'f';
+	l[37] = 'e';
+	l[38] = 'r';
+	l[39] = 'h';
+	l[40] = ' ';
+	l[41] = 'a';
+	l[42] = '<';
+	for (var i = l.length-1; i >= 0; i=i-1) {
+		if (l[i].substring(0, 1) === '|') document.write("&#"+unescape(l[i].substring(1))+";");
+		else document.write(unescape(l[i]));
+	}
+	//]]>
+</script><a href="mailto:info@wanchan.jp">お問い合わせ</a></li>
+						<li><a href="https://pochiwriter.com/">ライター募集</a></li>
+					</ul>
+					<ul class="list">
+						<li><a href="https://wanchan.jp/osusume/specialist">専門家一覧</a></li>
+						<li><a href="https://wanchan.jp/top/privacy">プライバシーポリシー</a></li>
+						<li><a href="https://wanchan.jp/top/company">運営会社</a></li>
+						<li><a href="https://wanchan.jp/top/media_achievement">メディア掲載情報</a></li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+		<div class="logo">
+			<a href="https://wanchan.jp/"><img src="https://images.wanchan.jp/images/footer/footer_logo.png" loading="lazy" alt="わんちゃんホンポ" class="footer_logo"></a>
+			<p class="note">犬のために、犬の気持ちを知り、犬と共に暮らす。<br>わんちゃんホンポは、あなたと愛犬の共同生活に色付けをする犬専門のメディアです。</p>
+			<ul class="footer_nsn_link">
+				<!--ツイッター-->
+				<li class="twitter">
+					<a href="https://x.com/wanchan_honpo"><img src="https://images.wanchan.jp/images/sns/xcom-fff.svg" loading="lazy" alt="わんちゃんホンポXページ"></a>
+				</li>
+				<!--Facebook-->
+				<li class="facebook">
+					<a href="https://www.facebook.com/wanpon.news/"><img src="https://images.wanchan.jp/images/sns/facebook-fff.svg" loading="lazy" alt="わんちゃんホンポFacebookページ"></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="copyright">
+		<div class="wrap">
+			<small>Copyright © P-NEST JAPAN INC.</small>
+		</div>
+	</div>
+</footer>
 </body>
 </html>
