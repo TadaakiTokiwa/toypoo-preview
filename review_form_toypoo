@@ -1,0 +1,574 @@
+<!doctype html>
+<html><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>トイプードルのreviewフォーム</title>
+
+<link rel="canonical" href="https://wanchan.jp/kensyu/review_form/toypoo">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="google-site-verification" content="jdGqP_2_gglN-jdUGaqW2thVlF1GzneOeYSoT2-W89Y">
+<meta name="google-site-verification" content="Qu3HP-1TidlnJTtH8WmD1ZzFsHlz7c2oNy_Kd0ciR8c">
+
+<meta name="msvalidate.01" content="408D1D16BA7C20F13D9C77D7F7217B41">
+
+<meta property="og:site_name" content="わんちゃんホンポ">
+<meta property="og:title" content="トイプードルのreviewフォーム">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:type" content="article">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://wanchan.jp/kensyu/review_form/toypoo">
+<meta name="twitter:site" content="@wanchan_honpo">
+<meta name="twitter:description" content="">
+<meta name="twitter:creator" content="@wanchan_honpo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="トイプードルのreviewフォーム">
+
+<meta property="og:image" content="https://images.wanchan.jp/images/ogp-wanchan.png">
+<meta name="twitter:image" content="https://images.wanchan.jp/images/ogp-wanchan.png">
+
+<meta name="ROBOTS" CONTENT="NOINDEX, FOLLOW">
+<meta name="robots" content="max-image-preview:large">
+
+<style>img{max-width:100%;height:auto}</style>
+
+<link rel="stylesheet" href="https://images.wanchan.jp/css/reset.css">
+<link rel="stylesheet" href="https://images.wanchan.jp/css/template.css?1774248347">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!--SP menu-->
+<link rel="stylesheet" href="https://images.wanchan.jp/css/sp_menu.css?1770947828" media="screen and (max-width: 1023px)">
+
+<link rel="stylesheet" href="https://images.wanchan.jp/css/style.css?1770947828">
+<link rel="stylesheet" href="https://images.wanchan.jp/css/form.css">
+
+<link rel="alternate" type="application/atom+xml" title="Atom" href="https://wanchan.jp/rss/atom.xml">
+<link rel="shortcut icon" href="https://images.wanchan.jp/images/favicon.ico">
+<link rel="shortcut icon" href="https://images.wanchan.jp/images/16.ico">
+<link rel="shortcut icon" href="https://images.wanchan.jp/images/32.ico">
+<link rel="shortcut icon" href="https://images.wanchan.jp/images/48.ico">
+<link rel="apple-touch-icon" href="https://images.wanchan.jp/images/apple-touch-icon.png?20231013">
+<link rel="apple-touch-icon" sizes="180x180" href="https://images.wanchan.jp/images/apple-touch-icon-180x180.png?20231013">
+
+<style>
+/*
+ * 以下は実際の本番CSS(images.wanchan.jp/css/photo_style.css 内の form.css 相当部分)から
+ * 確認できた「.photo_regist」配下の余白ルールです。
+ * このページの #main には photo_regist クラスが無く、また photo_style.css 自体も
+ * 読み込んでいないため本来のスタイルが一切当たっていませんでした。
+ * そのため実際の値をそのまま、このページで使っているクラス名に合わせて移植しています。
+ * (reset.cssがdiv/ul/li/form/input/textarea等のmargin・paddingを一律0にしているため、
+ *  この上書きが無いと全項目が詰まって見えます)
+ */
+.main_content {
+	margin: 10px;
+	padding-top: 0;
+}
+.regist_head {
+	position: relative;
+	margin: 0 -10px;
+}
+.regist_head h1 {
+	margin: .5em 0 1em;
+	padding: 0 10px;
+	border-bottom: 2px solid #ec5c5c;
+	color: #444;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+.main_content > .msg_view > .msg_view {
+	margin: 10px 0;
+	padding: 3px;
+	background-color: #FFF2F2;
+	border: 1px solid #ec5c5c;
+	border-radius: 3px;
+}
+form > div {
+	margin-bottom: 20px;
+}
+form > div a {
+	color: #e86666;
+	text-decoration: underline;
+}
+form label {
+	display: block;
+}
+form label.inline {
+	display: inline;
+}
+form label .require,
+form .notice {
+	color: #E86666;
+}
+form label .note {
+	color: #aaa;
+	font-size: .8em;
+	margin-left: 5px;
+}
+form input::placeholder {
+	color: #ccc;
+}
+form input[type="text"] {
+	height: auto;
+	padding: 5px 5px 0;
+	font-size: 1.6rem;
+}
+form .rule_agree {
+	text-align: center;
+	margin-bottom: 0;
+}
+.keiken_year input {
+	width: 5em;
+	margin-right: .5em;
+}
+
+/*
+ * ここから下は実際のCSSに定義が存在しない、このページ独自のクラス
+ * (score_block / score_area / advice_area など)向けの補完スタイルです。
+ * サイト全体のトーン(フォントサイズ・カラー)には合わせていますが、
+ * 実データに基づくものではなく暫定的な見た目調整である点にご注意ください。
+ */
+.score_block {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #eee;
+}
+.score_block h4 {
+	margin-bottom: 10px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #444;
+}
+.score_area {
+	margin-bottom: 10px;
+	line-height: 2;
+}
+.score_area label {
+	display: inline-block;
+	margin: 0 8px 0 0;
+}
+.advice_area p {
+	margin-bottom: 5px;
+}
+.advice_area textarea {
+	display: block;
+	width: 100%;
+	min-height: 100px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	box-sizing: border-box;
+	font-size: 1.4rem;
+}
+form select {
+	padding: 5px;
+	font-size: 1.4rem;
+}
+.submit {
+	text-align: center;
+	margin-top: 30px;
+}
+.submit input[type="submit"] {
+	padding: .85em 3em;
+	border: none;
+	border-radius: 2px;
+	background: #f0f2f5;
+	color: #444;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+}
+</style>
+
+</head>
+<body class="pc">
+
+<div id="sb-site">
+<header id="header" class="sb-slide Fixed">
+
+	<div class="wrap">
+
+	<!--sp_nemu-->
+	<p id="drawer_toggle"><img src="https://images.wanchan.jp/images/header/menu_sp.png" alt="メニュー"></p>
+
+	<div class="header_inner wanchan_nav ">
+		<div class="logo"><a href="https://wanchan.jp/"><img src="https://images.wanchan.jp/images/header/header_logo.png" alt="わんちゃんホンポ"></a></div>
+		<div class="header_info">わんちゃんとの暮らしをサポートする犬の専門メディア<br>話題の犬ニュースや生活の知恵を毎日配信</div>
+	</div>
+
+	<!--sp_search_category_link-->
+	<div class="pc_header_nav">
+		<div class="header_cate"><a href="https://wanchan.jp/osusume/category_list" class="pc_cate_link">カテゴリ一覧</a></div>
+		<div class="header_search"><a href="https://wanchan.jp/osusume/search_form" class="pc_cate_link">記事を検索</a></div>
+		<div class="header_login"><a href="https://wanchan.jp/general/login" class="pc_cate_link" rel="nofollow">会員登録/ログイン</a></div>
+	</div>
+	<div class="search_category_link">
+		<a href="https://wanchan.jp/osusume/search_form" class="sp_form_link"><img src="https://images.wanchan.jp/images/header/search_sp.png" alt="検索"></a>
+	</div>
+
+	</div>
+
+</header>
+<div id="content_wrap" >
+
+<div class="wrap">
+	<div class="pankuzu">
+		<ul class="list" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="https://wanchan.jp/" itemprop="item">
+					<span itemprop="name">わんちゃんホンポ</span>
+				</a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="https://wanchan.jp/kensyu/detail/toypoo" itemprop="item">
+					<span itemprop="name">犬種情報</span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li class="detail_title">
+				<span>犬種レビュー投稿フォーム</span>
+			</li>
+		</ul>
+	</div>
+
+<div id="main" class="n-kensyu review_form">
+<div class="main_content">
+	<div class="regist_head">
+		<h1>「トイプードル」のレビュー　投稿フォーム</h1>
+	</div>
+
+	<div class="msg_view "></div>
+
+	<form action="https://wanchan.jp/kensyu/review_post" method="post" accept-charset="utf-8">
+		<input type="hidden" name="csrf_token" value="a9337bf7562e189eba94ab5a648bceb2" />
+
+		<div>
+			<label>犬種選択<span class="require">※必須</span></label>
+			<select name="id_name" required>
+				<option value="toypoo" selected>トイプードル</option>
+			</select>
+		</div>
+
+		<div>
+			<label>投稿名<span class="require">※必須</span></label>
+			<input type="text" name="post_name" required>
+		</div>
+
+		<div>
+			<label>性別<span class="require">※必須</span></label>
+			<select name="sex" required>
+				<option value="man">男性</option>
+				<option value="woman">女性</option>
+				<option value="other">その他</option>
+			</select>
+		</div>
+
+		<div class="keiken_year">
+			<label>トイプードル飼育歴</label>
+			<input type="text" name="keiken_year"> 年
+		</div>
+
+		<div class="score_block">
+			<h4>トイプードルの散歩</h4>
+
+			<div class="score_area">
+				<p>Q、散歩は大変ですか？<span class="require">※必須</span></p>
+				（大変）
+				<label><input type="radio" name="score[1]" value="1" required>1</label>
+				<label><input type="radio" name="score[1]" value="2" required>2</label>
+				<label><input type="radio" name="score[1]" value="3" checked required>3</label>
+				<label><input type="radio" name="score[1]" value="4" required>4</label>
+				<label><input type="radio" name="score[1]" value="5" required>5</label>
+				（楽）
+			</div>
+
+			<div class="advice_area">
+				<p>Q、散歩に関して、初心者飼い主さんへアドバイスをお願いします</p>
+				<textarea name="advice[1]" minlength="50"></textarea>
+			</div>
+		</div>
+
+		<div class="score_block">
+			<h4>トイプードルのしつけ</h4>
+
+			<div class="score_area">
+				<p>Q、しつけは大変ですか？<span class="require">※必須</span></p>
+				（大変）
+				<label><input type="radio" name="score[2]" value="1" required>1</label>
+				<label><input type="radio" name="score[2]" value="2" required>2</label>
+				<label><input type="radio" name="score[2]" value="3" checked required>3</label>
+				<label><input type="radio" name="score[2]" value="4" required>4</label>
+				<label><input type="radio" name="score[2]" value="5" required>5</label>
+				（楽）
+			</div>
+
+			<div class="advice_area">
+				<p>Q、しつけに関して、初心者飼い主さんへアドバイスをお願いします</p>
+				<textarea name="advice[2]" minlength="50"></textarea>
+			</div>
+		</div>
+
+		<div class="score_block">
+			<h4>トイプードルのお手入れ</h4>
+
+			<div class="score_area">
+				<p>Q、お手入れは大変ですか？<span class="require">※必須</span></p>
+				（大変）
+				<label><input type="radio" name="score[3]" value="1" required>1</label>
+				<label><input type="radio" name="score[3]" value="2" required>2</label>
+				<label><input type="radio" name="score[3]" value="3" checked required>3</label>
+				<label><input type="radio" name="score[3]" value="4" required>4</label>
+				<label><input type="radio" name="score[3]" value="5" required>5</label>
+				（楽）
+			</div>
+
+			<div class="advice_area">
+				<p>Q、お手入れに関して、初心者飼い主さんへアドバイスをお願いします</p>
+				<textarea name="advice[3]" minlength="50"></textarea>
+			</div>
+		</div>
+
+		<div class="score_block">
+			<h4>トイプードルの抜け毛</h4>
+
+			<div class="score_area">
+				<p>Q、抜け毛は大変ですか？<span class="require">※必須</span></p>
+				（大変）
+				<label><input type="radio" name="score[4]" value="1" required>1</label>
+				<label><input type="radio" name="score[4]" value="2" required>2</label>
+				<label><input type="radio" name="score[4]" value="3" checked required>3</label>
+				<label><input type="radio" name="score[4]" value="4" required>4</label>
+				<label><input type="radio" name="score[4]" value="5" required>5</label>
+				（楽）
+			</div>
+
+			<div class="advice_area">
+				<p>Q、抜け毛に関して、初心者飼い主さんへアドバイスをお願いします</p>
+				<textarea name="advice[4]" minlength="50"></textarea>
+			</div>
+		</div>
+
+		<div class="score_block">
+			<h4>トイプードルのにおい</h4>
+
+			<div class="score_area">
+				<p>Q、においは大変ですか？<span class="require">※必須</span></p>
+				（大変）
+				<label><input type="radio" name="score[5]" value="1" required>1</label>
+				<label><input type="radio" name="score[5]" value="2" required>2</label>
+				<label><input type="radio" name="score[5]" value="3" checked required>3</label>
+				<label><input type="radio" name="score[5]" value="4" required>4</label>
+				<label><input type="radio" name="score[5]" value="5" required>5</label>
+				（楽）
+			</div>
+
+			<div class="advice_area">
+				<p>Q、においに関して、初心者飼い主さんへアドバイスをお願いします</p>
+				<textarea name="advice[5]" minlength="50"></textarea>
+			</div>
+		</div>
+
+		<div class="rule_agree">
+			<label class="inline">
+				<input type="checkbox" name="agree" value="1" required> <a href="https://wanchan.jp/top/rule" target="_blank">利用規約</a>に同意する
+			</label>
+		</div>
+
+		<div class="submit">
+			<input type="submit" name="act" value="投稿内容を確認する">
+		</div>
+
+	</form>
+</div>
+</div>
+<!-- / #main -->
+<div id="side">
+
+	<!--search-->
+	<div class="side_search">
+		<h4 class="sidebar_title">
+			キーワード検索
+			<span class="side_memo">調べたいキーワードで記事を検索</span>
+		</h4>
+		<div class="form">
+			<script>
+				(function() {
+					var cx = '000998346455513717258:olzzbyh6eqs';
+					var gcse = document.createElement('script');
+					gcse.type = 'text/javascript';
+					gcse.async = true;
+					gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(gcse, s);
+				})();
+			</script>
+			<div class="gcse-searchbox-only"></div>
+		</div>
+	</div>
+
+	<div class="home_banner">
+		<div class="sidebar_title">人気コンテンツ</div>
+<p><a href="https://wanchan.jp/photo"><img src="https://cdn.p-nest.co.jp/c/wanchan.jp/pro/resize/600x600/100/3/994ad8dca859a3076045347fec53db40.jpg" loading="lazy" alt="今日のわんちゃん"></a></p>
+
+<p><a href="https://wanchan.jp/dogbreed"><img src="https://cdn.p-nest.co.jp/c/wanchan.jp/pro/resize/600x600/100/8/91f844a22768031eeea404f4dbba6ca7.jpg" loading="lazy" alt="犬種情報"></a></p>
+
+<p><a href="https://wanchan.jp/dogfood/"><img src="https://cdn.p-nest.co.jp/c/wanchan.jp/pro/resize/600x600/100/2/89b94daa27f62a54b9420b80f0620a3d.png" loading="lazy" alt="コンテンツバナー"></a></p>
+
+<p><a href="https://wanchan.jp/supplement/"><img src="https://cdn.p-nest.co.jp/c/wanchan.jp/pro/resize/600x600/100/7/79657cc961515b5344a3be32028ce3c3.jpg" loading="lazy" alt="サプリ"></a></p>
+
+<p><a href="https://wanchan.jp/handbook/checkfood"><img src="https://cdn.p-nest.co.jp/c/wanchan.jp/pro/resize/600x600/100/5/5f0e6d2e22805d384ebf6077aa1a6d46.jpg" loading="lazy" alt="犬が食べてはいけないもの一覧"></a></p>
+	</div>
+
+</div>
+<!-- / #side -->
+</div>
+<!-- / .wrap -->
+
+<div class="footer_ad">
+	<div class="footer_ad_item">
+	</div>
+</div>
+
+
+<!--app_DL-->
+<div class="footer_app_dl">
+	<div class="wrap">
+		<picture>
+			<source media="(max-width: 1023px)" srcset="https://images.wanchan.jp/images/footer/footer_app_dl_sp.png">
+			<img src="https://images.wanchan.jp/images/footer/footer_app_dl_pc.png" loading="lazy" alt="公式アプリ好評配信中！" class="footer_app_dl_pc">
+		</picture>
+		<ul class="app_list">
+			<li>
+				<a href="https://itunes.apple.com/jp/app/wanchanhonpo-quanno-xi-nu/id1024363447?l=ja&ls=1&mt=8" class="itunes" target="_blank" rel="nofollow">
+					<img src="https://images.wanchan.jp/images/footer/app_store_pc.png" loading="lazy" alt="わんちゃんホンポアプリ APP Store">
+				</a>
+			</li>
+			<li>
+				<a href="https://play.google.com/store/apps/details?id=jp.qson.osurepo.wanchan" class="google" target="_blank" rel="nofollow">
+					<img src="https://images.wanchan.jp/images/footer/google.png" loading="lazy" alt="わんちゃんホンポアプリ Google play">
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!--app_DL_sp-->
+<div class="footer_app_dl_sp">
+	<a href="https://play.google.com/store/apps/details?id=jp.qson.osurepo.wanchan" class="footer_app_dl_sp_img" rel="nofollow"><img src="https://images.wanchan.jp/images/footer/footer_app_dl_sp.png" loading="lazy" alt="わんちゃんホンポアプリDL"></a>
+	<div class="block">
+		<p class="footer_app_dl_sp_title">アプリで愛犬との生活をより豊かに。</p>
+		<p class="footer_app_dl_sp_dis">快適にわんちゃんホンポの記事が読める！<br>見やすいカテゴリでみたいジャンルがすぐ見つかる。飼い主と愛犬のための犬専用アプリ。</p>
+		<a href="https://play.google.com/store/apps/details?id=jp.qson.osurepo.wanchan" class="footer_app_dl_sp_btn" rel="nofollow">アプリをダウンロード(無料)</a>
+	</div>
+</div>
+</div>
+<!--end content_wrap-->
+
+
+<footer class="footer">
+	<div class="wrap footer_content">
+
+		<div class="footer_nav">
+			<dl class="service">
+				<dt>サービス一覧</dt>
+				<dd>
+					<ul class="list">
+						<li><a href="https://wanchan.jp/photo">今日のわんちゃん</a></li>
+						<li><a href="https://pet-hoken-hikaku.jp/">ペット保険</a></li>
+					</ul>
+				</dd>
+			</dl>
+
+			<div id="pagetop">
+			<img src="https://images.wanchan.jp/images/footer/pageTop.png" loading="lazy" alt="トップへ戻る"><br>
+			ページの先頭へ
+			</div>
+
+			<dl class="about">
+				<dt>わんちゃんホンポについて</dt>
+				<dd>
+					<ul class="list">
+						<li><a href="https://wanchan.jp/top/feature">わんちゃんホンポとは</a></li>
+						<li><a href="https://wanchan.jp/top/editpolicy">編集ポリシー</a></li>
+						<li><a href="https://wanchan.jp/top/rule">利用規約</a></li>
+					</ul>
+					<ul class="list">
+						<li><a href="https://wanchan.jp/osusume/specialist">専門家一覧</a></li>
+						<li><a href="https://wanchan.jp/top/privacy">プライバシーポリシー</a></li>
+						<li><a href="https://wanchan.jp/top/company">運営会社</a></li>
+						<li><a href="https://wanchan.jp/top/media_achievement">メディア掲載情報</a></li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+		<div class="logo">
+			<a href="https://wanchan.jp/"><img src="https://images.wanchan.jp/images/footer/footer_logo.png" loading="lazy" alt="わんちゃんホンポ" class="footer_logo"></a>
+			<p class="note">犬のために、犬の気持ちを知り、犬と共に暮らす。<br>わんちゃんホンポは、あなたと愛犬の共同生活に色付けをする犬専門のメディアです。</p>
+			<ul class="footer_nsn_link">
+				<!--ツイッター-->
+				<li class="twitter">
+					<a href="https://x.com/wanchan_honpo"><img src="https://images.wanchan.jp/images/sns/xcom-fff.svg" loading="lazy" alt="わんちゃんホンポXページ"></a>
+				</li>
+				<!--Facebook-->
+				<li class="facebook">
+					<a href="https://www.facebook.com/wanpon.news/"><img src="https://images.wanchan.jp/images/sns/facebook-fff.svg" loading="lazy" alt="わんちゃんホンポFacebookページ"></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="copyright">
+		<div class="wrap">
+			<small>Copyright © P-NEST JAPAN INC.</small>
+		</div>
+	</div>
+</footer>
+</div>
+<!-- end sb-site-->
+
+<div id="menu" class="">
+
+<div class="menu_inner">
+
+<nav>
+	<div class="user_info">
+		<a href="https://wanchan.jp/general/regist" class="general" rel="nofollow">無料会員登録<br><span>またはログイン</span></a>
+	</div>
+
+	<ul class="menu_list">
+	<!--home-->
+	<li class="home">
+		<a href="https://wanchan.jp/"><span>ホーム</span></a>
+	</li>
+
+	<!--osusume-->
+	<li class="cate">
+		<a href="https://wanchan.jp/osusume/category_list"><span>カテゴリ</span></a>
+	</li>
+
+	<li class="search">
+		<a href="https://wanchan.jp/osusume/search_form"><span>記事検索</span></a>
+	</li>
+
+	<!--hoken-->
+	<li class="hoken">
+		<a href="https://pet-hoken-hikaku.jp/"><span>ペット保険</span></a>
+	</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</div>
+
+<script type="text/javascript" src="https://images.wanchan.jp/js/basic.js?220218"></script>
+<script type="text/javascript" src="https://images.wanchan.jp/js/sp_menu.js"></script>
+<script type="text/javascript" src="https://images.wanchan.jp/js/jquery.cookie.min.js"></script>
+
+</body>
+</html>
